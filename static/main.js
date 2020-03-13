@@ -263,7 +263,9 @@ function calculateStopsByGrid(data)
     {
         // Convert to Int to remove .0 then back to string
         // and increment or start count accordingly
-        var currentGrid = parseInt(data[i].Grid).toString();
+        var gridNum = (data[i].Grid === "367") ? "267" : data[i].Grid;
+
+        var currentGrid = parseInt(gridNum).toString();
         (currentGrid in countsByGrid.TrafficStops) ? countsByGrid.TrafficStops[currentGrid] += 1 : countsByGrid.TrafficStops[currentGrid] = 1;
         countsByType.TrafficStops += 1;
 
@@ -302,7 +304,10 @@ function addCountsToGeojson(data)
 
         // NOTE:  The geojson file has an error in gridnum that we are correcting here
         if (gridNum === "367")
+        {
             gridNum = "267";
+            data.features[c].properties.gridnum = "267";
+        }
 
         // Check first if the grid is valid, if so assign the count otherwise set to 0
         properties.TrafficStops = (gridNum in countsByGrid.TrafficStops) ? countsByGrid.TrafficStops[gridNum] : 0;
@@ -478,6 +483,8 @@ function createPins(response)
 
             var race = (response[i].Race).replace(/ +/g, "");
             selectedIcon = createIcon(iconType, iconColor, colorByType[race][strColor], "square");
+
+            var grid = response[i].Grid === "367" ? "267" : response[i].Grid;
     
             // Now add the marker at the proper location and create the popup
             markers.addLayer(L.marker([location.lat, location.lon], {icon: selectedIcon})
@@ -486,7 +493,7 @@ function createPins(response)
                     + "<div>Ticket Issued: " +  response[i].Citation + "</div>"
                     + "<div>Driver and/or Vehicle Searched:  " + searched + "</div>"
                     + "<div>Date:  " + response[i].Date + "</div>"
-                    + "<div>Grid Number:  " + response[i].Grid + "</div>"
+                    + "<div>Grid Number:  " + grid + "</div>"
             ));
         }
     }
