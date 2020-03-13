@@ -1,0 +1,55 @@
+
+/* ismyrnow on GitHub:  leaflet-groupedlayercontrol */
+/* https://github.com/ismyrnow/leaflet-groupedlayercontrol/blob/gh-pages/src/leaflet.groupedlayercontrol.css */
+.leaflet-control-layers-group-name {
+  font-weight: bold;
+  margin-bottom: .2em;
+  margin-left: 3px;
+}
+
+.leaflet-control-layers-group {
+  margin-bottom: .5em;
+}
+  
+.leaflet-control-layers-scrollbar {
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+
+.info {
+  padding: 6px 8px;
+  font: 12px/14px Arial, Helvetica, sans-serif;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+.pinlegend {
+  opacity: 0.9;
+}
+
+.legend {
+  line-height: 16px;
+  color: #071696;/*#555;*/
+}
+.legend i {
+  width: 24px;
+  height: 16px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.legend font {
+  width:  40px;
+  height: 16px;
+  float: left;
+}
+
+.summary-table th {
+  font-weight: bold;
+}

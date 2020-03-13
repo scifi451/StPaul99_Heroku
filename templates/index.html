@@ -16,6 +16,9 @@
     integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
     crossorigin=""></script>
 
+    <link rel="stylesheet" type="text/css" href="static/leaflet-groupedlayercontrol.css">
+    <script type="text/javascript" src="static/leaflet.groupedlayercontrol.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
 
@@ -144,17 +147,28 @@
           </div>
         </div>
 
-    <!-- Row to hold Leaflet Map -->
-    <div class="row">
-      <div class="col">
-            <div id="map" class="mapStyle">
-            <!-- styling of shape for map is in style.css file -->
-            <!-- We append our map here. -->
-            <br> 
-            <!-- Adding a break to create space between charts and graphic titles -->
-            </div>
+  <!-- Row to hold Leaflet Map -->
+  <div class="row">
+    <div class="col col-md-8">
+      <div id="map" class="mapStyle">
+        <!-- styling of shape for map is in style.css file -->
+        <!-- We append our map here. -->
+        <br> 
+        <!-- Adding a break to create space between charts and graphic titles -->
       </div>
     </div>
+    <div class="col col-md-4">
+      <div id="title"></div>
+      <div id="gender"></div>
+      <div id="race"></div>
+    </div>
+  </div>
+
+  <div class = "row">
+    <div class = "col">
+      <div id = "summary-table"></div>
+    </div>
+  </div>
 
   <div class = "row">
       <!-- Row to hold footer -->
@@ -186,7 +200,7 @@
   <script type="text/javascript" src="../static/basemaps.js"></script>
   <!-- <script type="text/javascript" src="../static/dashboard.js"></script> -->
   <script type="text/javascript" src="../static/main.js"></script> 
-  <!-- <script type="text/javascript" src="../static/map.js"></script> -->
+  <script type="text/javascript" src="../static/map.js"></script>
   <!-- <script type="text/javascript" src="../static/plot.js"></script> -->
   <!-- <script type="text/javascript" src="../static/plot2.js"></script> -->
   <!-- <script type="text/javascript" src="../static/chartist.js"></script>  -->
