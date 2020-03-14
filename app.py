@@ -39,6 +39,16 @@ def IndexRoute():
     webpage = render_template('index.html')
     return webpage
 
+@app.route('/graphs')
+def graphs():
+    webpage=render_template('graphs.html')
+    return webpage
+
+@app.route('/map')
+def map():
+    webpage=render_template('map.html')
+    return webpage
+    
 #  Data routes
 @app.route("/trafficdata")
 def trafficdata():

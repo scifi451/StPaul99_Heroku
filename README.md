@@ -5,7 +5,7 @@ This documentation shows the steps needed to run the project website on your loc
 computer.  
 
 Prequisites:
- A. MongoDB installed on your local computer (MongoDB is used for the database)
+ A. SQLite installed on your local computer (SQLite is used for the database)
  B. You have obtained an API_Key from the Mapbox (API Key is needed for Leaflet).
 
 Steps:
