@@ -26,7 +26,9 @@ Stops = Base.classes.traffic_stops
 # Flask Setup
 #################################################
 app = Flask(__name__)
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] =0
+# app.confg below was included to turn off caching in development.
+# it is no longer needed.
+# app.config['SEND_FILE_MAX_AGE_DEFAULT'] =0
 
 #################################################
 # Flask Routes
